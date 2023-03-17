@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Properties</title>
+</head>
+<style>
+    img{
+        max-width: 300px;
+        height: auto;
+        border: 2px solid gray;
+        display: block; /*For Centering Img*/
+        margin: 0 auto; /*For Centering Img*/
+        margin-top: 100px;
+        border-radius: 50%;
+    }
+    .info{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #social{
+        margin: 0 auto;
+        max-width: 48px;
+        height: auto;
+    }
+    #social:hover{
+        transition: 2s;
+        transform: scale(1.1)rotate(360deg);
+    }
+
+    .contact{
+        display: flex;
+        justify-content: center;
+    }
+    .contact a {
+        margin-inline: 5px;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+    .skill-container{
+        background-color: gray;
+        border-radius: 20px;
+        width: 500px;
+        margin:100px auto; /*FOR CENTER THE SKILL-CONTAINER DIV*/
+        padding: 20px;
+    }
+    .skill-container li{
+        list-style-type: none;
+        margin: 50px 0;
+        font-weight: bolder;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .skill-container li::before{
+        content: '';
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        background-color: rgb(170, 167, 173);
+        width: 100%;
+        height: 25px;
+        border-radius: 100px;
+    }
+    .skill-container li::after{
+        content: '';
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+
+        background-color: rgb(249, 249, 250);
+        width: 0;
+        height: 25px;
+        border-radius: 100px;
+    
+        animation-duration:2s;
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    .skill-container li#html::after{
+        animation-name: html;
+    }
+    @keyframes html {
+        to{
+            width: 100%;
+        }
+    }
+    .skill-container li#css::after{
+        animation-name: css;
+    }
+    @keyframes css {
+        to{
+            width: 90%;
+        }
+    }
+    .skill-container li#js::after{
+        animation-name: js;
+    }
+    @keyframes js {
+        to{
+            width: 80%;
+        }
+    }
+    .skill-container li#jq::after{
+        animation-name: jq;
+    }
+    @keyframes jq {
+        to{
+            width: 60%;
+        }
+    }
+    .skill-container li#bootstarp::after{
+        animation-name: bootstarp;
+    }
+    @keyframes bootstarp {
+        to{
+            width: 50%;
+        }
+    }
+    .skill-container li#react::after{
+        animation-name: react;
+    }
+    @keyframes react {
+        to{
+            width: 70%;
+        }
+    }
+    .skill-container li#asp-net::after{
+        animation-name: asp-net;
+    }
+    @keyframes asp-net {
+        to{
+            width: 40%;
+        }
+    }
+    .skill-container li#php::after{
+        animation-name: php;
+    }
+    @keyframes php {
+        to{
+            width: 95%;
+        }
+    }
+    .skill-container li#python::after{
+        animation-name: python;
+    }
+    @keyframes python {
+        to{
+            width: 90%;
+        }
+    }
+    .skill-container li#c::after{
+        animation-name: c;
+    }
+    @keyframes c {
+        to{
+            width: 100%;
+        }
+    }
+    .skill-container li#csharp::after{
+        animation-name: csharp;
+    }
+    @keyframes csharp {
+        to{
+            width: 73%;
+        }
+    }
+    .skill-container li#cpp::after{
+        animation-name: cpp;
+    }
+    @keyframes cpp {
+        to{
+            width: 93%;
+        }
+    }
+    .skill-container li#java::after{
+        animation-name: java;
+    }
+    @keyframes java {
+        to{
+            width: 86%;
+        }
+    }
+</style>
+<body>
+    <img src="x.jpg" alt="profile" id="profile-img">
+    <div class="info">
+        <h1>Eng. Mehedi Hasan</h1>
+        <h4>Junior programmer, Microsoft.</h4>
+    </div>
+    <div class="contact">
+        <a href="#"><img src="3463465_facebook_media_network_social_icon.png" alt="Facebook" id="social"></img></a>
+        <a href="#"><img src="3463469_instagram_social media_social_network_icon.png" alt="Instagram" id="social"></a>
+        <a href="#"><img src="3463480_media_network_social_twitter_icon.png" alt="Twitter" id="social"></a>
+        <a href="#"><img src="3463481_media_network_social_youtube_icon.png" alt="Youtube" id="social"></a>
+    </div>
+    <div class="skill-container">
+        <ul>
+            <li id="html">
+                HTML
+            </li>
+            <li id="css">
+                CSS
+            </li>
+            <li id="js">
+                JAVASCRIPT
+            </li>
+            <li id="jq">
+                jQUERY
+            </li>
+            <li id="bootstarp">
+                BOOTSTRAP
+            </li>
+            <li id="react">
+                REACT
+            </li>
+            <li id="asp-net">
+                ASP.NET
+            </li>
+            <li id="php">
+                PHP
+            </li>
+            <li id="python">
+                PYTHON
+            </li>
+            <li id="c">
+                C
+            </li>
+            <li id="cpp">
+                C++
+            </li>
+            <li id="csharp">
+                C#
+            </li>
+            <li id="java">
+                JAVA
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
